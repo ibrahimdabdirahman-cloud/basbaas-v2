@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BasBaas Cuisine — Authentic Somali Food · SE18 London</title>
+<meta name="description" content="SE18 London's newest Somali dining destination. Bold, authentic flavours from the Horn of Africa, built around our signature Basbaas sauce.">
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/basbaas.css">
+<style>
+  /* ---- quiet hero ---- */
+  .q-hero{padding:64px 0 92px}
+  .q-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+  .q-hero h1{font-size:clamp(46px,5.8vw,86px);font-weight:600;letter-spacing:-.035em;line-height:1.0}
+  .q-hero h1 .o{color:var(--orange)}
+  .q-hero .sub{margin-top:28px;font-size:19px;color:var(--muted);max-width:44ch;line-height:1.65}
+  .q-hero .acts{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
+  .q-hero .hero-meta{margin-top:32px;display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+  .q-hero .hero-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+  .q-hero-fig{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+  .q-hero-fig img{width:100%;height:100%;object-fit:cover}
+  .hero-tag{position:absolute;left:22px;bottom:22px;background:rgba(250,246,238,.95);
+    padding:14px 20px;border-radius:5px;font-size:13.5px;font-weight:600;color:var(--green);letter-spacing:.01em}
+  .hero-tag span{display:block;font-weight:400;color:var(--muted);font-size:12px;margin-top:3px;letter-spacing:.02em}
+
+  /* ---- story ---- */
+  .story{padding:104px 0;border-top:1px solid var(--line)}
+  .story-grid{display:grid;grid-template-columns:.42fr .58fr;gap:72px;align-items:start}
+  .story h2{font-size:clamp(34px,3.6vw,50px);max-width:11ch}
+  .story p{font-size:17.5px;color:var(--muted);line-height:1.8;max-width:56ch}
+  .story p + p{margin-top:18px}
+  .stat-row{display:flex;gap:48px;margin-top:38px}
+  .stat .n{font-size:38px;font-weight:700;color:var(--green);letter-spacing:-.03em}
+  .stat .l{font-size:13px;color:var(--muted);letter-spacing:.04em;margin-top:2px}
+
+  /* ---- signature contained card ---- */
+  .sig-wrap{padding:0 0 104px}
+  .sig-card{background:var(--green);color:var(--cream);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+  .sig-card-txt{padding:72px 60px}
+  .sig-card-txt h2{font-size:clamp(34px,3.8vw,52px);margin:18px 0 22px;color:var(--cream);letter-spacing:-.025em}
+  .sig-card-txt h2 .o{color:var(--orange)}
+  .sig-card-txt p{color:rgba(240,232,216,.8);font-size:17.5px;line-height:1.7;max-width:42ch}
+  .sig-card-img{position:relative;min-height:440px}
+  .sig-card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* ---- menu preview ---- */
+  .menu-prev{padding:0 0 104px}
+  .menu-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:24px;flex-wrap:wrap}
+  .menu-head h2{font-size:clamp(34px,4vw,54px)}
+  .dishes-4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+
+  /* ---- gallery teaser ---- */
+  .gal-teaser{padding:0 0 104px}
+  .gal-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:14px}
+  .gal-grid a{overflow:hidden;border-radius:5px;display:block}
+  .gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+  .gal-grid a:hover img{transform:scale(1.06)}
+  .gal-grid .w2{grid-column:span 2}.gal-grid .h2{grid-row:span 2}
+
+  /* ---- testimonials ---- */
+  .quotes{background:var(--paper-2);padding:104px 0}
+  .quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+  .q{background:var(--paper);padding:32px;border-radius:var(--radius);border:1px solid var(--line)}
+  .q .stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:16px}
+  .q p{font-size:15.5px;line-height:1.65}
+  .q .who{margin-top:20px;font-weight:600;font-size:14px;color:var(--green)}
+
+  /* ---- final cta (light) ---- */
+  .q-cta{padding:118px 0;text-align:center;border-top:1px solid var(--line)}
+  .q-cta h2{font-size:clamp(42px,5.4vw,80px);max-width:15ch;margin:0 auto 16px;letter-spacing:-.035em;font-weight:600}
+  .q-cta h2 .o{color:var(--orange)}
+  .q-cta p{color:var(--muted);font-size:18px;margin-bottom:32px}
+  .q-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  @media(max-width:960px){
+    .q-hero-grid{grid-template-columns:1fr;gap:40px}
+    .story-grid{grid-template-columns:1fr;gap:36px}
+    .sig-card{grid-template-columns:1fr}
+    .sig-card-img{min-height:300px;order:-1}
+    .dishes-4{grid-template-columns:1fr 1fr}
+    .gal-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:150px}
+    .quotes-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:560px){.dishes-4{grid-template-columns:1fr}.sig-card-txt{padding:48px 32px}}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img class="brand-mark" src="assets/brand/favicon.svg" alt="BasBaas logo">BasBaas</a>
+    <nav class="navlinks">
+      <a href="menu.html">Menu</a>
+      <a href="private-events.html">Private Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-gold btn-sm" data-book>Book a table</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav">
+  <button class="close" aria-label="Close">&times;</button>
+  <a href="menu.html">Menu</a>
+  <a href="private-events.html">Private Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="#" data-book style="color:var(--gold-bright)">Book a table</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="q-hero wrap">
+  <div class="q-hero-grid">
+    <div class="reveal">
+      <div class="eyebrow-row"><span class="label">Soo dhawoow · Welcome</span><span class="ln"></span></div>
+      <h1>The true taste of <span class="o">Somali</span> food.</h1>
+      <p class="sub">SE18 London's newest Somali dining destination — a calm, modern room and bold, authentic flavours from the Horn of Africa, built around our signature Basbaas sauce.</p>
+      <div class="acts">
+        <a class="btn btn-orange" data-book>Reserve a table</a>
+        <a class="btn btn-ghost" href="menu.html">View the menu</a>
+      </div>
+      <div class="hero-meta"><span>Dine in</span><span class="dot"></span><span>Takeaway</span><span class="dot"></span><span>SE18, London</span></div>
+    </div>
+    <div class="q-hero-fig reveal d1">
+      <img src="assets/img/basbaas-main.jpg" alt="Basbaas signature platter">
+      <div class="hero-tag">Signature platter<span>Slow-cooked lamb · bariis · basbaas</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="story wrap">
+  <div class="story-grid">
+    <div class="reveal">
+      <div class="eyebrow-row"><span class="label">Our story</span></div>
+      <h2>Where tradition meets excellence.</h2>
+    </div>
+    <div class="reveal d1">
+      <p>Basbaas brings the bold, aromatic flavours of the Horn of Africa to South East London. Every dish is made fresh, from scratch, using exceptional ingredients and recipes passed down through generations.</p>
+      <p>Whether you're new to Somali cuisine or a longtime fan, our table is set for you. Dine in, savour the flavour, and come back for more.</p>
+      <div class="stat-row">
+        <div class="stat"><div class="n">100%</div><div class="l">Made fresh, in-house</div></div>
+        <div class="stat"><div class="n">SE18</div><div class="l">In the heart of London</div></div>
+        <div class="stat"><div class="n">5.0</div><div class="l">From first-timers &amp; regulars</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIGNATURE ===== -->
+<section class="sig-wrap wrap">
+  <div class="sig-card">
+    <div class="sig-card-txt reveal">
+      <span class="label gold-bright">The heart of every dish</span>
+      <h2>Our signature <span class="o">Basbaas</span> sauce.</h2>
+      <p>A fiery, fragrant chilli sauce we make in-house — the soul of the kitchen and the reason we're named for it. Bright, bold, and unmistakably ours. Ask for it mild, medium, or hot.</p>
+      <a class="btn btn-gold" href="menu.html" style="margin-top:30px">Explore the menu</a>
+    </div>
+    <div class="sig-card-img reveal d1"><img src="assets/img/PHOTO-2026-01-10-17-43-37-9.jpg" alt="Basbaas chilli sauce dish"></div>
+  </div>
+</section>
+
+<!-- ===== MENU PREVIEW ===== -->
+<section class="menu-prev wrap">
+  <div class="menu-head">
+    <div class="reveal"><span class="label">From the kitchen</span><h2 style="margin-top:14px">A taste of the menu</h2></div>
+    <a class="btn btn-ghost reveal" href="menu.html">Full menu &rarr;</a>
+  </div>
+  <div class="dishes-4">
+    <a class="dish reveal" href="menu.html"><div class="dish-img"><img src="assets/img/PHOTO-2026-01-10-17-43-37-5.jpg" alt=""></div><div class="nm"><span>Lamb Shank</span><span class="pr">£13.95</span></div><p class="ds">Slow-cooked haniid, fresh salad &amp; chilli sauce.</p></a>
+    <a class="dish reveal d1" href="menu.html"><div class="dish-img"><img src="assets/img/PHOTO-2026-01-10-17-43-36-5.jpg" alt=""></div><div class="nm"><span>Beef Suqaar</span><span class="pr">£9</span></div><p class="ds">Tender beef, onions, peppers &amp; spices with bariis.</p></a>
+    <a class="dish reveal d2" href="menu.html"><div class="dish-img"><img src="assets/img/PHOTO-2026-01-10-17-43-36-11.jpg" alt=""></div><div class="nm"><span>Salmon Special</span><span class="pr">£11</span></div><p class="ds">Spiced salmon, grilled to perfection, with rice.</p></a>
+    <a class="dish reveal d3" href="menu.html"><div class="dish-img"><img src="assets/img/Tea-Sabaayad.jpg" alt=""></div><div class="nm"><span>Shaah &amp; Sabaayad</span><span class="pr">£4</span></div><p class="ds">Traditional Somali tea with fresh flatbread.</p></a>
+  </div>
+</section>
+
+<!-- ===== GALLERY TEASER ===== -->
+<section class="gal-teaser wrap-wide">
+  <div class="menu-head">
+    <div class="reveal"><span class="label">The room &amp; the food</span><h2 style="margin-top:14px;font-size:clamp(30px,3.4vw,46px)">From our table to yours</h2></div>
+    <a class="btn btn-ghost reveal" href="gallery.html">View gallery &rarr;</a>
+  </div>
+  <div class="gal-grid reveal">
+    <a class="w2 h2" href="gallery.html"><img src="assets/img/basbaas-main.jpg" alt=""></a>
+    <a href="gallery.html"><img src="assets/img/PHOTO-2026-01-10-17-43-36-3.jpg" alt=""></a>
+    <a href="gallery.html"><img src="assets/img/unnamed15.jpg" alt=""></a>
+    <a class="w2" href="gallery.html"><img src="assets/img/PHOTO-2026-01-10-17-43-36-5.jpg" alt=""></a>
+    <a href="gallery.html"><img src="assets/img/Tea-Sabaayad.jpg" alt=""></a>
+    <a href="gallery.html"><img src="assets/img/PHOTO-2026-01-10-17-43-37-9.jpg" alt=""></a>
+    <a class="w2" href="gallery.html"><img src="assets/img/PHOTO-2026-01-10-17-43-36.jpg" alt=""></a>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="quotes">
+  <div class="wrap">
+    <div style="text-align:center" class="reveal"><span class="label">Kind words</span><h2 style="font-size:clamp(32px,4vw,52px);margin-top:14px">Loved by first-timers &amp; regulars</h2></div>
+    <div class="quotes-grid">
+      <div class="q reveal"><div class="stars">★★★★★</div><p>"First time trying Somali food and it was a 10/10. Everything was so flavourful and comforting, with perfectly balanced spices."</p><div class="who">Sarah</div></div>
+      <div class="q reveal d1"><div class="stars">★★★★★</div><p>"The portions were such good value, the food delicious, chai stunning, and the host kindly gave us free date cake — this was heaven!"</p><div class="who">Amelia</div></div>
+      <div class="q reveal d2"><div class="stars">★★★★★</div><p>"Beautiful food, beautiful restaurant, beautiful humans, beautiful community. Such a delight — we'll be visiting again soon."</p><div class="who">Tracie</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="q-cta wrap">
+  <div class="reveal">
+    <span class="label">Visit us</span>
+    <h2 style="margin-top:16px">Come and <span class="o">taste</span> the Horn of Africa.</h2>
+    <p>Located in SE18, London. Dine in. Savour the flavour. Come back for more.</p>
+    <div class="btns"><a class="btn btn-orange" data-book>Book a table</a><a class="btn btn-ghost" data-order>Order online</a></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="foot-logo" src="assets/brand/basbaas-stacked-transparent.svg" alt="BasBaas — Authentic Somali Cuisine">
+        <p>Experience the true taste of Somali food at Basbaas. SE18, London.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 4c.3 1.8 1.4 3.2 3 3.6V10c-1.2 0-2.3-.4-3-1v5.5A4.5 4.5 0 1 1 11.5 10v2.4a2.1 2.1 0 1 0 1.9 2.1V4H16z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 2a7 7 0 0 1 3.6 13l-.4.2-2.7.7.7-2.6.2-.4A7 7 0 0 1 12 5zm-2.3 3.3c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 1.9.7 2.3.6 2.7.5.4 0 1.3-.5 1.5-1 .2-.5.2-.9.1-1l-.7-.3s-1.1-.5-1.3-.6c-.2-.1-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.4l-.6-1.5c-.2-.4-.3-.3-.5-.3z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="menu.html">Menu</a></li><li><a href="private-events.html">Private Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>SE18, London</li><li>Mon–Sun · 12pm–10pm</li><li><a href="contact.html">Get directions</a></li><li><a href="#" data-book>Book a table</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="mailto:basbaas28@gmail.com">basbaas28@gmail.com</a></li><li><a href="tel:02031962607">0203 1962 607</a></li><li><a href="#" data-order>Order online</a></li></ul></div>
+    </div>
+    <div class="foot-bot"><span>© <span data-year>2026</span> Basbaas Cuisine. All rights reserved.</span><span>Authentic Somali Cuisine · SE18 London</span></div>
+  </div>
+</footer>
+
+<script src="assets/basbaas.js"></script>
+</body>
+</html>

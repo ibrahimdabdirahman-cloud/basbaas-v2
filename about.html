@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — BasBaas Cuisine</title>
+<meta name="description" content="The story of Basbaas — bringing the bold, authentic flavours of Somalia and the Horn of Africa to SE18, London.">
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/brand/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/basbaas.css">
+<style>
+  .ab-intro{padding:110px 0}
+  .ab-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
+  .ab-intro h2{font-size:clamp(32px,3.8vw,52px);max-width:13ch}
+  .ab-intro p{font-size:17.5px;color:var(--muted);line-height:1.85;margin-top:18px;max-width:54ch}
+  .ab-intro p + p{margin-top:16px}
+  .ab-intro .img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+  .ab-intro .img img{width:100%;height:100%;object-fit:cover}
+
+  .values{background:var(--paper-2);padding:110px 0}
+  .values-head{text-align:center;margin-bottom:56px}
+  .values-head h2{font-size:clamp(32px,4vw,52px);margin-top:14px}
+  .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:38px 32px}
+  .vcard .num{font-size:13px;font-weight:700;color:var(--orange);letter-spacing:.1em}
+  .vcard h3{font-size:23px;margin:14px 0 10px}
+  .vcard p{font-size:15px;color:var(--muted);line-height:1.65}
+
+  .sig2{padding:0 0 110px}
+  .sig2 .card{background:var(--green);color:var(--cream);border-radius:8px;overflow:hidden;display:grid;grid-template-columns:1.05fr .95fr}
+  .sig2 .card-txt{padding:72px 60px;display:flex;flex-direction:column;justify-content:center}
+  .sig2 h2{font-size:clamp(34px,3.8vw,54px);margin:16px 0 20px;letter-spacing:-.025em;color:var(--cream)}
+  .sig2 h2 .o{color:var(--orange)}
+  .sig2 p{font-size:17.5px;color:rgba(240,232,216,.8);line-height:1.7;max-width:44ch}
+  .sig2 .card-img{position:relative;min-height:420px}
+  .sig2 .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  .pullquote{padding:120px 0;text-align:center}
+  .pullquote blockquote{font-size:clamp(28px,3.6vw,46px);font-weight:500;letter-spacing:-.02em;line-height:1.25;max-width:20ch;margin:24px auto 0}
+  .pullquote .o{color:var(--orange)}
+  .pullquote .by{margin-top:26px;font-weight:600;color:var(--green);font-size:15px;letter-spacing:.04em}
+
+  .ab-cta{background:var(--green);color:var(--cream);padding:110px 0;text-align:center}
+  .ab-cta h2{font-size:clamp(36px,4.6vw,68px);color:var(--cream);max-width:16ch;margin:0 auto 16px;letter-spacing:-.03em}
+  .ab-cta h2 .o{color:var(--orange)}
+  .ab-cta p{color:var(--muted-dark);font-size:18px;margin-bottom:32px}
+  .ab-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  @media(max-width:900px){
+    .ab-intro-grid{grid-template-columns:1fr;gap:36px}
+    .values-grid{grid-template-columns:1fr}
+    .sig2 .card{grid-template-columns:1fr}
+    .sig2 .card-img{min-height:280px;order:-1}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img class="brand-mark" src="assets/brand/favicon.svg" alt="BasBaas logo">BasBaas</a>
+    <nav class="navlinks">
+      <a href="menu.html">Menu</a>
+      <a href="private-events.html">Private Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-gold btn-sm" data-book>Book a table</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav">
+  <button class="close" aria-label="Close">&times;</button>
+  <a href="menu.html">Menu</a><a href="private-events.html">Private Events</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a href="#" data-book style="color:var(--gold-bright)">Book a table</a>
+</nav>
+
+<section class="page-hero wrap">
+  <span class="label">Our story</span>
+  <h1 style="margin-top:16px">Modern. Authentic. <em>Unforgettable.</em></h1>
+  <p class="lead">Basbaas is SE18 London's newest Somali dining destination — a modern setting and bold, authentic flavours inspired by the Horn of Africa.</p>
+</section>
+
+<section class="ab-intro wrap">
+  <div class="ab-intro-grid">
+    <div class="reveal">
+      <span class="label">Where it began</span>
+      <h2>Flavours from the Horn of Africa, served in South East London.</h2>
+      <p>Basbaas was born from a simple belief: that Somali food — generous, aromatic and deeply comforting — deserves a place at London's table. We built a calm, modern room in SE18 and filled it with the recipes, spices and hospitality we grew up with.</p>
+      <p>Every dish is made fresh, from scratch, using exceptional ingredients. Whether you're new to Somali cuisine or a longtime fan, this is where tradition meets excellence.</p>
+    </div>
+    <div class="img reveal d1"><img src="assets/img/PHOTO-2026-01-10-17-43-36-3.jpg" alt="Inside Basbaas"></div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="wrap">
+    <div class="values-head reveal">
+      <span class="label">What we stand for</span>
+      <h2>Three things, done well.</h2>
+    </div>
+    <div class="values-grid">
+      <div class="vcard reveal"><div class="num">01</div><h3>Authenticity</h3><p>Traditional Somali recipes passed down through generations — canjeero, suqaar, haniid and shaah, exactly as they should be.</p></div>
+      <div class="vcard reveal d1"><div class="num">02</div><h3>Freshness</h3><p>Made from scratch, every day. Nothing pre-made, nothing rushed — just exceptional ingredients treated with care.</p></div>
+      <div class="vcard reveal d2"><div class="num">03</div><h3>Hospitality</h3><p>A warm welcome, a friendly host, and the kind of generosity that makes first-timers feel like regulars.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sig2 wrap">
+  <div class="card">
+    <div class="card-txt reveal">
+      <span class="label gold-bright">Our namesake</span>
+      <h2>Named for the <span class="o">Basbaas</span> sauce.</h2>
+      <p>"Basbaas" is the Somali word for chilli — and our signature sauce is the soul of the kitchen. Fiery, fragrant and made in-house, it's the thread that runs through everything we cook. Ask for it mild, medium or hot.</p>
+    </div>
+    <div class="card-img reveal d1"><img src="assets/img/PHOTO-2026-01-10-17-43-37-9.jpg" alt="Basbaas sauce"></div>
+  </div>
+</section>
+
+<section class="pullquote wrap">
+  <span class="label">In our guests' words</span>
+  <blockquote>"Beautiful food, beautiful restaurant, beautiful humans, beautiful <span class="o">community.</span>"</blockquote>
+  <div class="by">— Tracie, on her first visit</div>
+</section>
+
+<section class="ab-cta">
+  <div class="wrap">
+    <h2>Come and <span class="o">taste</span> the difference.</h2>
+    <p>Located in SE18, London. Dine in. Savour the flavour. Come back for more.</p>
+    <div class="btns"><a class="btn btn-orange" data-book>Book a table</a><a class="btn btn-gold" href="menu.html">View the menu</a></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="foot-logo" src="assets/brand/basbaas-stacked-transparent.svg" alt="BasBaas — Authentic Somali Cuisine">
+        <p>Experience the true taste of Somali food at Basbaas. SE18, London.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 4c.3 1.8 1.4 3.2 3 3.6V10c-1.2 0-2.3-.4-3-1v5.5A4.5 4.5 0 1 1 11.5 10v2.4a2.1 2.1 0 1 0 1.9 2.1V4H16z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3zm0 2a7 7 0 0 1 3.6 13l-.4.2-2.7.7.7-2.6.2-.4A7 7 0 0 1 12 5zm-2.3 3.3c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 3.9 3.4 1.9.7 2.3.6 2.7.5.4 0 1.3-.5 1.5-1 .2-.5.2-.9.1-1l-.7-.3s-1.1-.5-1.3-.6c-.2-.1-.3-.1-.5.1l-.6.8c-.1.1-.2.1-.4 0-.2-.1-.9-.3-1.7-1-.6-.6-1-1.2-1.2-1.4-.1-.2 0-.3.1-.4l.3-.4.2-.4v-.4l-.6-1.5c-.2-.4-.3-.3-.5-.3z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="menu.html">Menu</a></li><li><a href="private-events.html">Private Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>SE18, London</li><li>Mon–Sun · 12pm–10pm</li><li><a href="contact.html">Get directions</a></li><li><a href="#" data-book>Book a table</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="mailto:basbaas28@gmail.com">basbaas28@gmail.com</a></li><li><a href="tel:02031962607">0203 1962 607</a></li><li><a href="#" data-order>Order online</a></li></ul></div>
+    </div>
+    <div class="foot-bot"><span>© <span data-year>2026</span> Basbaas Cuisine. All rights reserved.</span><span>Authentic Somali Cuisine · SE18 London</span></div>
+  </div>
+</footer>
+
+<script src="assets/basbaas.js"></script>
+</body>
+</html>
