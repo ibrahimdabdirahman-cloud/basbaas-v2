@@ -70,7 +70,7 @@
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-gold btn-sm" data-book>Book a table</a>
+      <a class="btn btn-gold btn-sm" data-book data-masul-open="booking">Book a table</a>
       <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -78,7 +78,7 @@
 <nav class="mobile-nav">
   <button class="close" aria-label="Close">&times;</button>
   <a href="menu.html">Menu</a><a href="private-events.html">Private Events</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-  <a href="#" data-book style="color:var(--gold-bright)">Book a table</a>
+  <a href="#" data-book data-masul-open="booking" style="color:var(--gold-bright)">Book a table</a>
 </nav>
 
 <section class="page-hero wrap">
@@ -132,8 +132,8 @@
         </div>
       </div>
       <div><h4>Explore</h4><ul><li><a href="menu.html">Menu</a></li><li><a href="private-events.html">Private Events</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Visit</h4><ul><li>SE18, London</li><li>Mon–Sun · 12pm–10pm</li><li><a href="contact.html">Get directions</a></li><li><a href="#" data-book>Book a table</a></li></ul></div>
-      <div><h4>Get in touch</h4><ul><li><a href="mailto:basbaas28@gmail.com">basbaas28@gmail.com</a></li><li><a href="tel:02031962607">0203 1962 607</a></li><li><a href="#" data-order>Order online</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>SE18, London</li><li>Mon–Sun · 12pm–10pm</li><li><a href="contact.html">Get directions</a></li><li><a href="#" data-book data-masul-open="booking">Book a table</a></li></ul></div>
+      <div><h4>Get in touch</h4><ul><li><a href="mailto:basbaas28@gmail.com">basbaas28@gmail.com</a></li><li><a href="tel:02031962607">0203 1962 607</a></li><li><a href="#" data-order data-masul-open="order">Order online</a></li></ul></div>
     </div>
     <div class="foot-bot"><span>© <span data-year>2026</span> Basbaas Cuisine. All rights reserved.</span><span>Authentic Somali Cuisine · SE18 London</span></div>
   </div>
@@ -163,5 +163,13 @@
   });
 })();
 </script>
+<!-- masul:start -->
+<script>
+window.MASUL_SITE_ID="basbaas-v2";
+window.MASUL_ACCENT="#e8642f";
+window.MASUL_MENU=[{"cat":"Light Bites","name":"Basbaas Liver","price":7},{"cat":"Light Bites","name":"Basbaas Egg Omelet","price":6},{"cat":"Light Bites","name":"Masoub","price":7},{"cat":"Mains","name":"Marinated Quarter Chicken","price":9},{"cat":"Mains","name":"Chicken Suqaar","price":9},{"cat":"Mains","name":"Salmon Special","price":11},{"cat":"Mains","name":"Kingfish Special","price":11},{"cat":"Desserts","name":"Date Cake","price":4},{"cat":"Desserts","name":"Milk Cake","price":4}];
+</script>
+<script src="masul-widget.js" defer></script>
+<!-- masul:end -->
 </body>
 </html>
